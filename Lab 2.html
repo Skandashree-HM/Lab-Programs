@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Vowels</title>
+</head>
+<body>
+    <script>
+        var str=prompt("Enter the Input","")
+        //alter(str);
+        if(!(isNaN(str))){
+
+            var num,rem,rev=0;
+            num=parseInt(str);
+            while(num!=0){
+            rem=num%10;
+            num=parseInt(num/10);
+            rev=rev*10+rem;
+            //alter(num)
+        }
+        alert("Reverse of  "+str+"  is "  +rev);
+    }
+    else
+    {
+        str=str.toUpperCase();
+        for(i=0;i<str.length;i++)
+        {
+            var ch=str.charAt(i);
+          
+          if(ch=='A' ||ch=='E' ||ch=='I' ||ch=='O' ||ch=='U')
+          break;
+       
+        }
+        if(i<str.length)
+        alert("The position of the left most vowel is "+(i+1));
+        else 
+        alter("No vowels found");
+    }
+    </script>
+</body>
+</html>
